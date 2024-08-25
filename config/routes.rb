@@ -4,4 +4,7 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
     registrations: "users/registrations"
   }
+  resources :posts do
+    resources :comments, only: %i[create update destroy]
+  end
 end
