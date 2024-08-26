@@ -3,11 +3,12 @@ source "https://rubygems.org"
 gem "rails", "~> 7.2.1"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
+gem 'sidekiq'
+gem 'redis'
 
 # gem 'sprockets-rails'
 
 
-# gem "redis", ">= 4.0.1"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
 
