@@ -66,7 +66,7 @@ The Blog Application is a RESTful API designed to manage user authentication and
 
    ```bash
    git clone https://github.com/moeyad7/rails-blog-api.git
-   cd blog
+   cd rails-blog-api
    ```
 
 2. **Start the application using Docker Compose**:
