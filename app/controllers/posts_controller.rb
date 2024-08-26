@@ -24,8 +24,8 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      # PostDeletionJob.set(wait: 24.hours).perform_later(@post.id)
-      PostDeletionJob.set(wait: 20.seconds).perform_later(@post.id)
+      PostDeletionJob.set(wait: 24.hours).perform_later(@post.id)
+      # PostDeletionJob.set(wait: 20.seconds).perform_later(@post.id) # for testing
       render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
